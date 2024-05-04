@@ -7,6 +7,7 @@ public class playerController : MonoBehaviour
     [Header("Player")]
     public Rigidbody2D playerRigidBody;
     public Transform playerTransform;
+    public Animator playerAnimation;
 
     [Header("Speed")]
     public float maxSpeedX;
@@ -15,7 +16,7 @@ public class playerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAnimation = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,14 +26,7 @@ public class playerController : MonoBehaviour
         float movY = Input.GetAxis("Vertical");
 
         playerRigidBody.velocity = new Vector3(movX * maxSpeedX, movY * maxSpeedY);
-        
-        if(movX > 0)
-        {
-            playerTransform.localScale = new Vector3(2, 2, 2);
-        }
-        else
-        {
-            playerTransform.localScale = new Vector3(1, 1, 1);
-        }
+        playerAnimation.SetFloat("movx", movX);
+       
     }
 }
