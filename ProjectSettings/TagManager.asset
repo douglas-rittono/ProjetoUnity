@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - BlueShot
+  - Enemy
   layers:
   - Default
   - TransparentFX

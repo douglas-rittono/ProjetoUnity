@@ -47,3 +47,4 @@ MonoBehaviour:
   tiroPrefab: {fileID: 2683755007289009264, guid: 619df84c436358c49bf5e748c44a156e, type: 3}
   forceSpeedFire: 300
   isPlayer: 1
+  shootInterval: 0.5
