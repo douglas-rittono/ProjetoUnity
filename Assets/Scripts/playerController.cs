@@ -48,4 +48,12 @@ public class playerController : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "EnemyShoot")
+        {
+            Application.LoadLevel("LoadScene");
+        }
+    }
 }

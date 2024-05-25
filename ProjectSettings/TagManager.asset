@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BlueShot
   - Enemy
+  - EnemyShoot
   layers:
   - Default
   - TransparentFX

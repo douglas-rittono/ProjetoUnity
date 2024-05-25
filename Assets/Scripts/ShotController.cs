@@ -20,24 +20,17 @@ public class ShotController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTime += Time.deltaTime;
-
-        if(currentTime >= shootInterval)
+        if(Input.GetButtonDown("Fire1") && isPlayer)
         {
-            currentTime = 0;
             Atirar();
         }
-        //if(Input.GetButtonDown("Fire1") && isPlayer)
-        //{
-        //    Atirar();
-        //}
     }
 
     public void Atirar()
     {
         GameObject tempTiro = Instantiate(tiroPrefab) as GameObject;
         tempTiro.transform.position = transform.position;
-
+                
         tempTiro.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, forceSpeedFire));
     }
 }
